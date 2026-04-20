@@ -59,7 +59,8 @@ auth.post('/register', async (c) => {
 
 	setCookie(c, 'session', sessionId, {
 		httpOnly: true,
-		sameSite: 'Lax',
+		sameSite: 'None',
+		secure: true,
 		maxAge: SESSION_DURATION,
 		path: '/',
 	})
@@ -95,7 +96,8 @@ auth.post('/login', async (c) => {
 
 	setCookie(c, 'session', sessionId, {
 		httpOnly: true,
-		sameSite: 'Lax',
+		sameSite: 'None',
+		secure: true,
 		maxAge: SESSION_DURATION,
 		path: '/',
 	})
